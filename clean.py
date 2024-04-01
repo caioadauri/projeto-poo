@@ -30,4 +30,4 @@ df.to_csv('./three_columns.csv', index=False)
 
 print(df.dtypes)
 mostrar = df.iloc[:31]
-display(mostrar)
+#display(mostrar)
