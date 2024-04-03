@@ -1,4 +1,5 @@
 from read import Read
+from convert import Convert
 
 
 arquivo = 'fipezap.xlsx'
@@ -10,7 +11,7 @@ engine = 'openpyxl'
 
 result = Read(arquivo, aba, coluna, ignorar_linhas, maximo_linhas, engine)
 
-print(result.dataframe)
+csv = Convert(result.dataframe, 'fipezap.csv')
 
 # separar cada aba do excel
 excel_file = pd.ExcelFile('fipezap-serieshistoricas.xlsx')
