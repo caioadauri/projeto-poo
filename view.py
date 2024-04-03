@@ -11,7 +11,7 @@ class FileCSV():
 
   
   def media(self):
-    media = self.dataframe.groupby(self.dataframe['Data'])['Total'].mean()
+    media = self.dataframe.groupby(self.dataframe['Data'].dt.year)['Total'].mean()
 
     return media.round(2)
   

@@ -1,8 +1,10 @@
 from read import Read
 from convert import Convert
 from view import FileCSV
+from graph import Graph
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 arquivo = 'fipezap.xlsx'
 aba = 'Índice FipeZAP'
@@ -31,28 +33,33 @@ terceiro_quartil = retorno.terceiro_quartil()
 
 coeficiente_variacao = retorno.coeficiente_variacao()
 
+graph = Graph()
+
+graph.plot_media_ano()
 
 # print(csv.dataframe)
 # resumo = retorno.resumo()
 # print('---------------------------')
 
 print(f'Média: {media}')
-print(f'Soma: {retorno_tabela}')
-print(f'Mediana: {mediana}')
-print(f'Desvio: {desvio}')
-print(f'Primeiro Quartil {primeiro_quartil}')
-print(f'Terceiro Quartil { terceiro_quartil}')
+# print(f'Soma: {retorno_tabela}')
+# print(f'Mediana: {mediana}')
+# print(f'Desvio: {desvio}')
+# print(f'Primeiro Quartil {primeiro_quartil}')
+# print(f'Terceiro Quartil { terceiro_quartil}')
 print(f'Coeficiente de Variação: {coeficiente_variacao}')
 
 # print(retorno.dataframe['Total'])
 
-# x = retorno.dataframe['Data']
-# y = retorno.dataframe['Total'].tolist()
-# plt.bar(x, y, color='red')
-# plt.xlabel('Data')
-# plt.ylabel('Total')
-# plt.title('Distribuição normal dos índices')
-# plt.show()
+
+
+x = retorno.dataframe['Data']
+y = retorno.dataframe.index
+plt.plot(x, y, 'r--')
+plt.xlabel('Data')
+plt.ylabel('Total')
+plt.title('Distribuição normal dos índices')
+plt.show()
 
 
 # import pandas as pd
