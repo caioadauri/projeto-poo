@@ -17,3 +17,11 @@ class Graph():
     plt.grid(True)
     plt.tight_layout()
     plt.show()
+
+  def boxplot(self):
+    retorno.dataframe.plot(kind='box', figsize=(15,5), vert=False, title='Boxplot')
+
+
+box = Graph()
+
+box.boxplot()
