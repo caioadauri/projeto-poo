@@ -16,7 +16,7 @@ class FileCSV():
     return media.round(2)
   
   def soma_por_ano(self):
-    soma = self.dataframe.groupby(self.dataframe['Data'])['Total'].describe()
+    soma = self.dataframe.groupby(self.dataframe['Data'].dt.year)['Total'].describe()
 
     return soma
   
