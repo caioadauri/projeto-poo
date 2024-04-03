@@ -24,11 +24,13 @@ mediana = retorno.mediana()
 
 coeficiente_variacao = retorno.coeficiente_variacao()
 
-resumo = retorno.resumo()
 
-print(coeficiente_variacao)
-print(media)
-print(soma)
-print(mediana)
+print(csv.dataframe)
+resumo = retorno.resumo()
 print('---------------------------')
-print(resumo)
+print(f'Coeficiente de Variação: {coeficiente_variacao}')
+print(f'Média: {media}')
+print(f'Soma: {soma}')
+print(f'Mediana: {mediana}')
+
+
