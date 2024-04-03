@@ -16,5 +16,20 @@ class FileCSV():
     soma = self.dataframe['Total'].count()
 
     return soma
+  
+  def mediana(self):
+    mediana = self.dataframe['Total'].median()
+
+    return mediana
+  
+  def coeficiente_variacao(self):
+    coeficiente_variacao = self.dataframe['Total'].std() / self.dataframe['Total'].mean() * 100
+
+    return coeficiente_variacao
+  
+  def resumo(self):
+    resumo = self.dataframe['Total'].describe()
+
+    return resumo
 
 

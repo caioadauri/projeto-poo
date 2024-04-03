@@ -20,4 +20,15 @@ media = retorno.media()
 
 soma = retorno.soma()
 
+mediana = retorno.mediana()
+
+coeficiente_variacao = retorno.coeficiente_variacao()
+
+resumo = retorno.resumo()
+
+print(coeficiente_variacao)
+print(media)
 print(soma)
+print(mediana)
+print('---------------------------')
+print(resumo)
