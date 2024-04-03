@@ -35,40 +35,15 @@ coeficiente_variacao = retorno.coeficiente_variacao()
 
 graph = Graph()
 
-# graph.plot_media_ano()
-
-# print(csv.dataframe)
-# resumo = retorno.resumo()
-# print('---------------------------')
+graph.plot_media_ano()
+graph.boxplot()
+graph.plot_distribuicao_normal()
 
 print(f'Média: {media}')
-# print(f'Soma: {retorno_tabela}')
-# print(f'Mediana: {mediana}')
-# print(f'Desvio: {desvio}')
-# print(f'Primeiro Quartil {primeiro_quartil}')
-# print(f'Terceiro Quartil { terceiro_quartil}')
+print(f'Soma: {retorno_tabela}')
+print(f'Mediana: {mediana}')
+print(f'Desvio: {desvio}')
+print(f'Primeiro Quartil {primeiro_quartil}')
+print(f'Terceiro Quartil { terceiro_quartil}')
 print(f'Coeficiente de Variação: {coeficiente_variacao}')
-print(csv.dataframe)
 
-csv.dataframe.plot(kind='box', figsize=(15,5), vert=False, title='Boxplot')
-
-# print(retorno.dataframe['Total'])
-
-
-
-
-
-
-# x = retorno.dataframe['Data']
-# y = retorno.dataframe.index
-# plt.plot(x, y, 'r--')
-# plt.xlabel('Data')
-# plt.ylabel('Total')
-# plt.title('Distribuição normal dos índices')
-# plt.show()
-
-
-# import pandas as pd
-# df = pd.read_csv('fipezap.csv', header=None).rename(columns={0:'Data', 1: 'Valores'}).set_index('Data')
-# df.index = pd.to_datetime(df.index, format='mixed').date
-# df.plot(figsize=(15,10))
