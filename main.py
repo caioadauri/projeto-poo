@@ -19,20 +19,30 @@ retorno = FileCSV('fipezap.csv')
 
 media = retorno.media()
 
-soma = retorno.soma_por_ano()
+retorno_tabela = retorno.soma_por_ano()
 
-# mediana = retorno.mediana()
+mediana = retorno.mediana()
 
-# coeficiente_variacao = retorno.coeficiente_variacao()
+desvio = retorno.desvio_padrao_ano()
+
+primeiro_quartil = retorno.primeiro_quartil()
+
+terceiro_quartil = retorno.terceiro_quartil()
+
+coeficiente_variacao = retorno.coeficiente_variacao()
 
 
 # print(csv.dataframe)
 # resumo = retorno.resumo()
 # print('---------------------------')
-# print(f'Coeficiente de Variação: {coeficiente_variacao}')
+
 print(f'Média: {media}')
-print(f'Soma: {soma}')
-# print(f'Mediana: {mediana}')
+print(f'Soma: {retorno_tabela}')
+print(f'Mediana: {mediana}')
+print(f'Desvio: {desvio}')
+print(f'Primeiro Quartil {primeiro_quartil}')
+print(f'Terceiro Quartil { terceiro_quartil}')
+print(f'Coeficiente de Variação: {coeficiente_variacao}')
 
 # print(retorno.dataframe['Total'])
 
