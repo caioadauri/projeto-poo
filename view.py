@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import matplotlib as plt
 
 class FileCSV():
   def __init__(self, file):
@@ -9,14 +11,14 @@ class FileCSV():
 
   
   def media(self):
-    media = self.dataframe['Total'].mean()
+    media = self.dataframe.groupby(self.dataframe['Data'])['Total'].mean()
 
     return media.round(2)
   
-  def soma(self):
-    soma = self.dataframe['Total'].sum()
+  def soma_por_ano(self):
+    soma = self.dataframe.groupby(self.dataframe['Data'])['Total'].describe()
 
-    return soma.round(2)
+    return soma
   
   def mediana(self):
     mediana = self.dataframe['Total'].median()
@@ -43,5 +45,7 @@ class FileCSV():
      print(f'{traducoes[indice]}: {valor}')
 
     return indice
+  
+
 
 
