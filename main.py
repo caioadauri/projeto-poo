@@ -1,5 +1,16 @@
-import pandas as pd
-import os
+from read import Read
+
+
+arquivo = 'fipezap.xlsx'
+aba = 'Índice FipeZAP'
+coluna = 'B:C'
+ignorar_linhas = 4
+maximo_linhas = 194
+engine = 'openpyxl'
+
+result = Read(arquivo, aba, coluna, ignorar_linhas, maximo_linhas, engine)
+
+print(result.dataframe)
 
 # separar cada aba do excel
 excel_file = pd.ExcelFile('fipezap-serieshistoricas.xlsx')
