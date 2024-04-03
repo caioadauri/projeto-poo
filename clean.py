@@ -1,5 +1,10 @@
 import pandas as pd
 
+class Clean():
+  def __init__(self, file):
+    self.file = file
+    self.dataframe = pd.read_csv(file)
+
 df = pd.read_csv('./three_columns.csv')
 
 # renomeando as colunas

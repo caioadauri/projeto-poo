@@ -1,5 +1,6 @@
 from read import Read
 from convert import Convert
+from view import FileCSV
 
 
 arquivo = 'fipezap.xlsx'
@@ -12,3 +13,11 @@ engine = 'openpyxl'
 result = Read(arquivo, aba, coluna, ignorar_linhas, maximo_linhas, engine)
 
 csv = Convert(result.dataframe, 'fipezap.csv')
+
+retorno = FileCSV('fipezap.csv')
+
+media = retorno.media()
+
+soma = retorno.soma()
+
+print(soma)
